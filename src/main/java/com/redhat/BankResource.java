@@ -25,8 +25,8 @@ public class BankResource {
 	public static final Logger logger = Logger.getLogger(BankResource.class.toString());
 	
 	public BankResource() {
-		accountscollection.add(new BankAccount("Mr Harry", "123456789", "London", new BigDecimal(123456.66)));
-		accountscollection.add(new BankAccount("Mr James", "1234567890", "USA", new BigDecimal(12345688.66)));
+		accountscollection.add(new BankAccount("Mr Harry", "123456789", "London", new BigDecimal(123456.66), "Premium"));
+		accountscollection.add(new BankAccount("Mr James", "1234567890", "USA", new BigDecimal(12345688.66), "Standard"));
 	}
 	
 	private Set<BankAccount> accountscollection = Collections.newSetFromMap(Collections.synchronizedMap(new LinkedHashMap<>()));
@@ -44,6 +44,14 @@ public class BankResource {
     public Response getallaccounts() {
         return Response.ok(accountscollection.toArray()).build();
     }
+
+    @GET
+    @Path("/getsingleaccount/")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getsingleaccount() {
+        return Response.ok(accountscollection.iterator().next()).build();
+    }
+
     
     
     @POST
