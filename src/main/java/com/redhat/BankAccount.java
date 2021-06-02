@@ -15,17 +15,19 @@ public class BankAccount {
 		
 	}
 	
-	public BankAccount(String name, String accountNumber, String address, BigDecimal currentBalance) {
+	public BankAccount(String name, String accountNumber, String address, BigDecimal currentBalance, String accountType) {
 		this.name = name;
 		this.accountNumber = accountNumber;
 		this.address = address;
 		this.currentBalance = currentBalance;
+		this.accountType = accountType;
 	}
 	
 	private String name;
 	private String accountNumber;
 	private String address;
 	private BigDecimal currentBalance;
+	private String accountType;
 	
 	public String getName() {
 		return name;
@@ -52,12 +54,19 @@ public class BankAccount {
 		this.currentBalance = currentBalance;
 	}
 	
+		
+	public String getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+
 	@Override
 	public String toString() {
 		return "BankAccount [name=" + name + ", accountNumber=" + accountNumber + ", address=" + address
-				+ ", currentBalance=" + currentBalance + "]";
+				+ ", currentBalance=" + currentBalance + ", accountType=" + accountType + "]";
 	}
-	
-	
 	
 }
