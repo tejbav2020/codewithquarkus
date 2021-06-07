@@ -36,7 +36,15 @@ public class BankResource {
     public String hello() {
         return "Hello RESTEasy";
     }
-    
+
+	
+    @GET
+    @Path("/getdefaultcurrency/")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getdefaultcurrency() {
+        return "The default currency is INR";
+    }
+	
     
     @GET
     @Path("/getallaccounts/")
