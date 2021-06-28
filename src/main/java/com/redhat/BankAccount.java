@@ -6,7 +6,7 @@ package com.redhat;
 import java.math.BigDecimal;
 
 /**
- * @author tebavish
+ * @author tebavish - test
  *
  */
 public class BankAccount {
