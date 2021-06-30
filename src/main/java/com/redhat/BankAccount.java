@@ -6,7 +6,7 @@ package com.redhat;
 import java.math.BigDecimal;
 
 /**
- * @author tebavish - Test WebHook for CI / CD
+ * @author tebavish - Test WebHook for CI / CD For New Approach
  *
  */
 public class BankAccount {
