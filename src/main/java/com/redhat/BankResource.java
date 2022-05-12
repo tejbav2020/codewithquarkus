@@ -42,7 +42,7 @@ public class BankResource {
     @Path("/getdefaultcurrency/")
     @Produces(MediaType.TEXT_PLAIN)
     public String getdefaultcurrency() {
-        return "The default currency is USD";
+        return "The default currency is EUR";
     }
 	
     
